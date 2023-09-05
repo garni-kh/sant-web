@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/industry/:industry/:solution',
       name: 'solotion',
-      component: () => import('../views/NotFound.vue'),
+      component: () => import('../views/IndustryViewPage2.vue'),
       props: true
     }
   ]
