@@ -1,15 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: HomeView,
- 
+      component: HomeView
     },
     {
       path: '/about',
@@ -24,19 +22,18 @@ const router = createRouter({
       path: '/contactUs',
       name: 'contact',
       component: () => import('../views/ContactUsView.vue')
-      
     },
     {
-      path:'/industry/:industry',
+      path: '/industry/:industry',
       name: 'industryName',
-      component:() => import('../views/IndustryView.vue')  ,
+      component: () => import('../views/IndustryView.vue'),
       props: true
     },
     {
       path: '/industry/:industry/:solution',
       name: 'solotion',
-      component:() => import('null')
-      path:true
+      component: () => import('../views/NotFound.vue'),
+      props: true
     }
   ]
 })
