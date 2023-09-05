@@ -1,13 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+import { ref,watchEffect } from 'vue'
 
-const data = ref([])
+import apiSource from '../assets/api-config.json'
 
-async function fetchData() {
-  const res = await fetch(`http://185.227.111.193:8000/Industries`)
-  data.value = await res.json()
-}
-fetchData()
+const apiUrl = apiSource[0]["url"]
+
+const data = ref('')
+
+const API_URL = `${apiUrl}Industries`
+
+watchEffect(async () => {
+  // this effect will run immediately and then
+  // re-run whenever currentBranch.value changes
+  const url = `${API_URL}`
+  data.value = await (await fetch(url)).json()
+})
 </script>
 <template>
   <section class="max-w-[1102px] mx-auto py-[60px]">
