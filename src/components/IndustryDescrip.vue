@@ -1,21 +1,24 @@
 <script setup>
 import { ref, watchEffect } from 'vue'
+import apiSource from '../assets/api-config.json'
 
+const apiUrl = apiSource[0]["url"]
 const urlkey = defineProps(['indurl'])
 const urlInd = urlkey.indurl
 
-const API_URL = `http://185.227.111.193:8000/IndNameToText?indName=`
+
 
 const currentUrl = ref(urlInd)
 console.log(currentUrl)
 const data = ref('null')
 console.log(data)
 //console.log(this.$route.props.industry )
-
+const API_URL = `${apiUrl}IndNameToText?indName=`
 watchEffect(async () => {
   // this effect will run immediately and then
   // re-run whenever currentBranch.value changes
   const url = `${API_URL}${currentUrl.value}`
+  console.log("garniiiiiiiiFromDescrpi   "+url)
   data.value = await (await fetch(url)).json()
 })
 </script>
