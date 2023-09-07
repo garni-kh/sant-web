@@ -1,36 +1,30 @@
 <script setup>
-import { ref, watchEffect } from 'vue'
-import apiSource from '../assets/api-config.json'
 
-const apiUrl = apiSource[0]["url"]
-const urlkey = defineProps(['indurl'])
-const urlInd = urlkey.indurl
+defineProps({
+  pageTitle: {
+    type: String,
+    required: true
+  },
+  
+  pageDecripation:{
+      
+  required: true
+    }
+  }
+)
 
 
 
-const currentUrl = ref(urlInd)
-console.log(currentUrl)
-const data = ref('null')
-console.log(data)
-//console.log(this.$route.props.industry )
-const API_URL = `${apiUrl}IndNameToText?indName=`
-watchEffect(async () => {
-  // this effect will run immediately and then
-  // re-run whenever currentBranch.value changes
-  const url = `${API_URL}${currentUrl.value}`
-  console.log("garniiiiiiiiFromDescrpi   "+url)
-  data.value = await (await fetch(url)).json()
-})
 </script>
 <template>
   <section class="max-w-[1113px] mx-auto mb-[48px] mt-[42px]">
     <h1 class="text-primary-500 text-[32px] leading-[50px] font-bold text-center mb-[40px]">
-      مشاوره و راهکار ها
+    مشاوره و راهکارها
     </h1>
-    <h2 class="text-primary-400 text-[28px] font-bold text-center mb-[40px]">{{ currentUrl }}</h2>
+    <h2 class="text-primary-400 text-[28px] font-bold text-center mb-[40px]">{{pageTitle}}</h2>
   </section>
   <!-- Page Title:End -->
-
+  
   <!-- Heading Box:Begin -->
   <section class="max-w-[607px] mx-auto md:px-0 mb-[40px]">
     <div
@@ -43,8 +37,7 @@ watchEffect(async () => {
     </div>
 
     <p
-      v-html="data[0][1]"
-      class="text-[14px] text-[#403D3D] font-normal leading-[28.525px] px-[20px]"
-    ></p>
+      v-html=pageDecripation
+      class="text-[14px] text-[#403D3D] font-normal leading-[28.525px] px-[20px]"></p>
   </section>
 </template>

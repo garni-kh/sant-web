@@ -24,13 +24,13 @@ const router = createRouter({
       component: () => import('../views/ContactUsView.vue')
     },
     {
-      path: '/industry/:industry',
-      name: 'industryName',
+      path: '/:industry',
+      name: 'industery.category',
       component: () => import('../views/IndustryView.vue'),
       props: true
     },
     {
-      path: '/industry/:industry/:solution',
+      path: '/:industry/:solution',
       name: 'solotion',
       component: () => import('../views/IndustryViewPage2.vue'),
       props: true

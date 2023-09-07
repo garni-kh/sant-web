@@ -38,7 +38,7 @@ watchEffect(async () => {
           <router-link
             v-for="i in data"
             :key="i.id"
-            :to="{ name: 'industryName', params: { industry: i.Name } }"
+            :to="{ name: 'industery.category', params: { industry: i.Name } }"
             class="px-[50px] py-[12px] bg-santGreen rounded-[16px] text-[18] font-bold text-white"
           >
             {{ i.Name }}
