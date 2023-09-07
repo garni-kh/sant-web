@@ -20,7 +20,7 @@ defineProps({
       <router-link 
         v-for="i in solotions"
         :key="i.ID"
-        to="{ name: 'solotion' }"
+        :to="{ name: 'solotion', params: { solution: i.solotion_name } }"
         class="rounded-[16px] shadow-lg bg-white col-span-3 md:col-span-2"
       >
         <img
