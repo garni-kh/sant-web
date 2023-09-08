@@ -1,21 +1,17 @@
 <script setup>
-import { ref} from 'vue'
+import { ref } from 'vue'
 
 import apiSource from '../assets/api-config.json'
 
-const apiUrl = apiSource[0]["url"]
+const apiUrl = apiSource[0]['url']
 
 const data = ref('')
 
 const API_URL = `${apiUrl}Industries`
 
-
-
-async function fetchData(){
+async function fetchData() {
   data.value = null
-  const res =await fetch(
-    `${API_URL}`
-  )
+  const res = await fetch(`${API_URL}`)
   data.value = await res.json()
 }
 

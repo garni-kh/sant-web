@@ -9,7 +9,7 @@ import MenuFooter from './components/MenuFooter.vue'
     <MenuHeder />
   </header>
 
-  <RouterView  />
+  <RouterView />
 
   <footer class="bg-primary-500">
     <MenuFooter />

@@ -1,8 +1,5 @@
 <script setup>
-import IndustrySolotionDescrip from '../components/IndustrySolotionDescrip.vue';
-
-
-
+import IndustrySolotionDescrip from '../components/IndustrySolotionDescrip.vue'
 </script>
 
 <template>

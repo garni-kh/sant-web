@@ -1,11 +1,12 @@
-[{
-    "id":1,
-    "name":"germany",
+[
+  {
+    "id": 1,
+    "name": "germany",
     "url": "http://185.227.111.193:8000/"
-},
-{
-    "id":2,
-    "name":"localhost",
+  },
+  {
+    "id": 2,
+    "name": "localhost",
     "url": "http://127.0.0.1:8000/"
-}
-  ]
+  }
+]
