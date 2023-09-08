@@ -51,7 +51,7 @@ export default {
 <template>
   <section class="max-w-[864px] mx-auto mb-[120px]">
     <div class="grid grid-cols-6 gap-[24px]">
-      <div v-if="loading" class="loading">Loading...</div>
+      <div v-if="error" class="error">{{ error }}</div>
 
       <div v-if="error" class="error">{{ error }}</div>
       <router-link
