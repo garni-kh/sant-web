@@ -31,7 +31,7 @@ const router = createRouter({
     },
     {
       path: '/:industry/:solution',
-      name: 'solotion',
+      name: 'solotion.name',
       component: () => import('../views/IndustryViewPage2.vue'),
       props: true
     }

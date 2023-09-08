@@ -6,7 +6,7 @@ import apiSource from '../assets/api-config.json'
 const apiUrl = apiSource[0]["url"]
 
 
-const urlInd1 =defineProps(['industry'])
+//const urlInd1 =defineProps(['industry'])
 const urlInd = urlInd1.industry
 
 
@@ -14,36 +14,20 @@ const urlInd = urlInd1.industry
 const API_URL = `${apiUrl}IndNameToText?indName=`
 
 
-const industeryText = ref(['null'])
-function fetchData() {
-  industeryText.value = null
-  const res = fetch(
-    `${API_URL}${urlInd}`
-  )
-  industeryText.value =  res
-}
+const industeryText = ref([''])
 
-fetchData()
 
 
 const API_URL1 = `${apiUrl}Solution?selectedInd=`
 const solotionsList = ref(['null'])
 
-function fetchDataForSolotionList() {
-  solotionsList.value = null
-  const res = fetch(
-    `${API_URL1}${urlInd}`
+async function fetchData(){
+  industeryText.value = null
+  const res =await fetch(
+    `${API_URL}${urlInd}`
   )
-  solotionsList.value = res
+  industeryText.value = await res.json()
 }
-
-fetchDataForSolotionList()
-
-
-
-
-
-
 
 
 
@@ -65,3 +49,4 @@ const solotionsList = ref(['null'])
    <IndustrySolutionList v-bind:solotions=solotionsList />
   <IndustrySolutionSection />
 -->
+
