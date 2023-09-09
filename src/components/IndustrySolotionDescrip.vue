@@ -84,4 +84,63 @@ export default {
       </div>
     </div>
   </section>
+
+
+  <section class="md:px-[24px] w-full mb-[133px]">
+        <h2 class="text-primary-400 text-[28px] font-bold text-center mb-[140px]">محصولات مرتبط</h2>
+
+        <div class="py-[25px] bg-gradiantsant rounded-[24px]">
+            <div class="max-w-[1000px] mx-auto grid grid-cols-3 gap-x-[16px] gap-y-[64px] -translate-y-[50px] px-[50px] md:px-0 ">
+                <div class="col-span-3 md:col-span-1 px-[28px] py-[24px] bg-[#DDF0FC] rounded-[16px] shadow-xl">
+                    <div class="flex items-end justify-start gap-x-[16px] mb-[10px] -mt-[85px]">
+                        <img src="./images/product-pic.png" class="h-[143px] object-cover" />
+
+                        <div class="flex flex-col items-start justify-start pb-[20px]">
+                            <p class="text-[20px] font-medium text-[#2A447F]">تیت دیپ</p>
+                            <p class="text-[11px] font-normal text-[#2A447F]">TeatDip</p>
+                        </div>
+                    </div>
+
+                    <p class="text-[#403D3D] text-[12px] leading-[22.89px] font-normal text-justify">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. ت
+                        چاپ و با استفاده از
+                        طراحان گرافیک است.
+                    </p>
+                </div>
+                <div class="col-span-3 md:col-span-1 px-[28px] py-[24px] bg-[#DDF0FC] rounded-[16px] shadow-xl">
+                    <div class="flex items-end justify-start gap-x-[16px] mb-[10px] -mt-[85px]">
+                        <img src="https://source.unsplash.com/random/600x600?sig=1" class="h-[143px] object-cover" />
+
+                        <div class="flex flex-col items-start justify-start pb-[20px]">
+                            <p class="text-[20px] font-medium text-[#2A447F]">تیت دیپ</p>
+                            <p class="text-[11px] font-normal text-[#2A447F]">TeatDip</p>
+                        </div>
+                    </div>
+
+                    <p class="text-[#403D3D] text-[12px] leading-[22.89px] font-normal text-justify">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. ت
+                        چاپ و با استفاده از
+                        طراحان گرافیک است.
+                    </p>
+                </div>
+                <div class="col-span-3 md:col-span-1 px-[28px] py-[24px] bg-[#DDF0FC] rounded-[16px] shadow-xl">
+                    <div class="flex items-end justify-start gap-x-[16px] mb-[10px] -mt-[85px]">
+                        <img src="./images/product-pic.png" class="h-[143px] object-cover" />
+
+                        <div class="flex flex-col items-start justify-start pb-[20px]">
+                            <p class="text-[20px] font-medium text-[#2A447F]">تیت دیپ</p>
+                            <p class="text-[11px] font-normal text-[#2A447F]">TeatDip</p>
+                        </div>
+                    </div>
+
+                    <p class="text-[#403D3D] text-[12px] leading-[22.89px] font-normal text-justify">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. ت
+                        چاپ و با استفاده از
+                        طراحان گرافیک است.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </template>
